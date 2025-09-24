@@ -1,0 +1,265 @@
+<!-- Hemlav Schools - Responsive Single-file HTML Page -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hemlav Schools — Learning. Growing. Thriving.</title>
+  <meta name="description" content="Hemlav Schools — A modern, caring school focused on academic excellence and holistic development." />
+  <style>
+    /* Basic Reset */
+    :root{
+      --accent:#1e90ff;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f8fafc;
+      --glass: rgba(255,255,255,0.6);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;background:var(--bg);color:#0f172a}
+    a{color:var(--accent);text-decoration:none}
+
+    /* Layout */
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
+    nav ul{display:flex;gap:18px;list-style:none}
+    .cta{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:28px 0}
+    .hero-card{background:linear-gradient(180deg,white,var(--glass));border-radius:16px;padding:28px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+    .hero h1{font-size:28px;margin-bottom:10px}
+    .hero p{color:var(--muted);line-height:1.6}
+    .hero-actions{margin-top:18px;display:flex;gap:12px}
+
+    /* Services / Programs */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 15px rgba(15,23,42,0.04)}
+    .card h3{margin-bottom:8px}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* Testimonials */
+    .testimonials{display:flex;flex-direction:column;gap:12px}
+    .testimonial{padding:14px;border-radius:12px;background:linear-gradient(180deg,#fff, #fbfdff);border:1px solid rgba(15,23,42,0.03)}
+
+    /* Footer */
+    footer{margin-top:36px;padding:24px 0;color:var(--muted);border-top:1px solid rgba(2,6,23,0.04)}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    form label{display:block;font-size:13px;margin-bottom:6px;color:var(--muted)}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf3;background:white}
+    textarea{min-height:120px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .contact-grid{grid-template-columns:1fr}
+      .hero{grid-template-columns:1fr}
+    }
+    @media (max-width:520px){
+      nav ul{display:none}
+      header{gap:12px}
+      .logo{width:46px;height:46px}
+      .hero h1{font-size:22px}
+      .grid-3{grid-template-columns:1fr}
+      .gallery img{height:90px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden>HS</div>
+        <div>
+          <div style="font-weight:700">Hemlav Schools</div>
+          <div class="muted" style="font-size:13px">Empowering curious minds</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div><a class="cta" href="#admissions">Apply Now</a></div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-card">
+          <h1 id="hero-heading">Welcome to Hemlav Schools — where every child belongs</h1>
+          <p>Hemlav Schools is a modern learning community focused on academic excellence, creativity, and character development. We provide a safe, nurturing environment that encourages curiosity and builds confidence.</p>
+
+          <div class="hero-actions">
+            <a class="cta" href="#programs">Our Programs</a>
+            <a href="#contact" style="align-self:center">Visit Us</a>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:14px;align-items:center">
+            <div style="display:flex;flex-direction:column">
+              <strong>Grades</strong>
+              <span class="muted">Nursery – Grade 12</span>
+            </div>
+            <div style="display:flex;flex-direction:column">
+              <strong>Student-Teacher Ratio</strong>
+              <span class="muted">1:18</span>
+            </div>
+            <div style="display:flex;flex-direction:column">
+              <strong>Affiliation</strong>
+              <span class="muted">CBSE / State Board</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Large visual card -->
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(2,6,23,0.06)">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="students studying together" style="width:100%;height:100%;display:block;object-fit:cover;min-height:260px">
+        </div>
+      </section>
+
+      <section id="about" style="margin-top:24px">
+        <div class="card">
+          <h2>About Hemlav Schools</h2>
+          <p class="muted" style="margin-top:8px">Founded on principles of inclusivity and academic rigour, Hemlav Schools blends traditional values with modern pedagogies to prepare students for a fast-changing world.</p>
+        </div>
+      </section>
+
+      <section id="programs" style="margin-top:20px">
+        <h2>Our Programs</h2>
+        <div class="grid-3" style="margin-top:12px">
+          <div class="card">
+            <h3>Early Years</h3>
+            <p class="muted">Play-based learning for children 3–6 years focusing on social, emotional and cognitive foundations.</p>
+          </div>
+          <div class="card">
+            <h3>Primary</h3>
+            <p class="muted">Inquiry-driven curriculum that builds literacy, numeracy and critical thinking.</p>
+          </div>
+          <div class="card">
+            <h3>Secondary</h3>
+            <p class="muted">Subject depth, project work and exam preparation for Grades 9–12.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="admissions" style="margin-top:20px">
+        <h2>Admissions</h2>
+        <div class="card" style="margin-top:12px">
+          <p class="muted">Admissions are open for the academic year. We welcome tours, trial days and meetings with our admissions team.</p>
+          <ul class="muted" style="margin-top:12px;list-style:disc;padding-left:18px">
+            <li>Submit application form</li>
+            <li>School tour & assessment</li>
+            <li>Interview with parents & child</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="gallery" style="margin-top:22px">
+        <h2>Gallery</h2>
+        <div class="gallery" style="margin-top:12px">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="classroom activity">
+          <img src="https://images.unsplash.com/photo-1517247921621-1f1b6f2a0b6b?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="science experiment">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="art session">
+          <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=800&auto=format&fit=crop&s=placeholder" alt="sports day">
+        </div>
+      </section>
+
+      <section id="testimonials" style="margin-top:22px">
+        <h2>What parents say</h2>
+        <div class="testimonials" style="margin-top:12px">
+          <div class="testimonial">
+            <strong>Rina K., Parent</strong>
+            <p class="muted" style="margin-top:6px">"The teachers are so supportive and the learning environment helped my child find confidence."</p>
+          </div>
+          <div class="testimonial">
+            <strong>Amit S., Parent</strong>
+            <p class="muted" style="margin-top:6px">"Excellent balance of academics and extracurriculars."</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:22px">
+        <h2>Contact & Visit</h2>
+        <div class="contact-grid" style="margin-top:12px">
+          <div class="card">
+            <form onsubmit="event.preventDefault(); alert('Thanks! We will contact you soon.')" aria-label="Contact form">
+              <label for="name">Full name</label>
+              <input id="name" name="name" required placeholder="Your full name">
+
+              <label for="email" style="margin-top:10px">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+              <label for="grade" style="margin-top:10px">Applying for grade</label>
+              <select id="grade" name="grade">
+                <option>Nursery</option>
+                <option>KG</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6+</option>
+              </select>
+
+              <label for="message" style="margin-top:10px">Message</label>
+              <textarea id="message" name="message" placeholder="Any questions or a preferred visit date"></textarea>
+
+              <div style="margin-top:12px;display:flex;gap:10px">
+                <button type="submit" class="cta">Send</button>
+                <button type="button" onclick="toggleMap()">Show Map</button>
+              </div>
+            </form>
+          </div>
+
+          <aside class="card" id="mapCard" style="min-height:240px;display:flex;flex-direction:column;gap:10px;justify-content:center;align-items:center">
+            <div style="text-align:center">
+              <strong>Hemlav Schools — Main Campus</strong>
+              <p class="muted" style="margin-top:6px">123 Learning Lane, Your City</p>
+            </div>
+            <div id="mapPlaceholder" style="width:100%;height:160px;border-radius:8px;overflow:hidden;background:linear-gradient(90deg, #f3f6fb, #fff);display:flex;align-items:center;justify-content:center;color:var(--muted)">Map hidden — click "Show Map"</div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <div style="font-weight:700">Hemlav Schools</div>
+          <div class="muted" style="font-size:13px">© " + new Date().getFullYear() + " Hemlav Schools. All rights reserved.</div>
+        </div>
+        <div class="muted">Admissions: admissions@hemlav.example | Phone: +91 90000 00000</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Small JS for interactions
+    function toggleMap(){
+      const placeholder = document.getElementById('mapPlaceholder');
+      if(placeholder.innerText.includes('hidden')){
+        // Replace with an embedded map iframe placeholder (no external key required here)
+        placeholder.innerHTML = '<iframe title="Hemlav location" src="https://www.openstreetmap.org/export/embed.html?bbox=77.5%2C12.9%2C77.6%2C13.0&layer=mapnik" style="border:0;width:100%;height:100%"></iframe>';
+      } else {
+        placeholder.innerText = 'Map hidden — click "Show Map"';
+      }
+    }
+  </script>
+
+</body>
+</html>
