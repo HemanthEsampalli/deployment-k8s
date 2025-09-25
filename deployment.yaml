@@ -13,7 +13,7 @@ spec:
   replicas: 4
   selector:
     matchExpressions:
-      - key: env
+      - key: web
         operator: In
         values:
           - yellowapp-pods
