@@ -27,7 +27,7 @@ spec:
     type: RollingUpdate
     rollingUpdate:
       maxSurge: 1
-      maxUnavilable: 1
+      maxUnavailable: 1
   template: 
     metadata:
       name: podlevellables
