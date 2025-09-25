@@ -32,7 +32,7 @@ spec:
     metadata:
       name: podlevellables
       labels:
-        web: yellowllapp-pods
+        web: yellowapp-pods
         env: prod
         frontend: web
     spec: 
