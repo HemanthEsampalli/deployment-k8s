@@ -1,5 +1,5 @@
-apiversion: apps/v1 
-kind: Deployment  
+apiVersion: apps/v1
+kind: Deployment
 metadata: 
   name: rp-pods
   lables: 
@@ -38,7 +38,7 @@ spec:
     spec: 
       containers:
         - name: yellowimage
-          image:
+          image: hemanth65/hemanth-electricimage
           ports:
             - name: yellowapp-ports
               containerport: 80
